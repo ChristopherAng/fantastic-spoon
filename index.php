@@ -130,11 +130,11 @@
     </section><!-- End My Services Section -->
 
     <section>
-      <form action="data.php" method="post">
+      <form action="data.php">
         <input type="text" name="name" placeholder="What do you want to be called?">
         <br>
         <input type="text" name="question" placeholder="Your question">
-        <input type="submit" name="submit">
+        <input type="submit" value="Save">
       </form>
     </section>
 
