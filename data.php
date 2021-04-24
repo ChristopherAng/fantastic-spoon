@@ -1,11 +1,10 @@
 <?php
-    extract($_REQUEST);
-    $file=fopen("data.txt","a");
-
-    fwrite($file,"name :");
-    fwrite($file, $name ."\n");
-    fwrite($file,"Email :");
-    fwrite($file, $question ."\n");
-    fclose($file)
-    header("location: index.php");
- ?>
+              
+if(isset($_POST['question']))
+{
+$data=$_POST['question'];
+$fp = fopen('fields.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+?>
