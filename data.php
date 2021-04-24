@@ -1,7 +1,11 @@
 <?php
-if( isset($_POST['name'] ) && isset( $_POST['question'] ) )
-{
-    $txt= $_POST['name'].' - '.$_POST['question'] . PHP_EOL; 
-    file_put_contents('fields.txt', $txt, FILE_APPEND);
-}
-?>
+    extract($_REQUEST);
+    $file=fopen("data.txt","a");
+
+    fwrite($file,"name :");
+    fwrite($file, $name ."\n");
+    fwrite($file,"Email :");
+    fwrite($file, $question ."\n");
+    fclose($file)
+    header("location: index.php");
+ ?>
